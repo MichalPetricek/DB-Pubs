@@ -1,0 +1,12 @@
+﻿@page
+@model PubBase.Pages.DetailModel
+@{
+}
+<a class="btn btn-dark" asp-page="./Index">Seznam</a>
+<dl>
+    <dt>Název</dt>
+    <dd>@Model.Pub.Name</dd>
+    <dt>Město</dt>
+    <dd>@Model.Pub.Address</dd>
+    
+</dl>

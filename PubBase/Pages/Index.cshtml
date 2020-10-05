@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <table class="table">
+        <tbody>
+            @foreach (var p in Model.Pubs)
+            {
+                <tr>
+                    <td>@p.Name</td>
+                    <td>@p.Address</td>
+                    <td> <a class="btn btn-info" asp-page="./Detail" asp-route-id="@p.Id">Detail</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <form method="post">
+        <input type="submit" value="Add Another" class="btn btn-primary" />
+    </form>
+</div>
